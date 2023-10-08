@@ -1,0 +1,37 @@
+				
+				body {
+						background-image: url("pic.jpg");
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: 1500px 1100px;
+					}
+				
+				h1 {
+						text-align: center;
+						background-color: #52AFED;
+						font-family: Lucida Handwriting;
+						border: 2px;
+						border-style: dotted;
+						border-color: blue;
+						padding: 10px 15px 15px;
+						width: 250px;
+						margin-bottom: 20px;
+					}
+				
+				p {
+						text-align: justified;
+						background-color: hsl(192, 100%,50%);
+						font-style: italic;
+						padding: 20px;
+						border: 3px solid black;
+						border-style: dashed dotted solid double;
+						width: 500px;
+					}
+					
+				span {
+						font-weight: bold;
+						font-style: italic;
+						color: rgb(15, 0, 143);
+						margin-left: 2px;
+						margin-right: 5px;
+					}
