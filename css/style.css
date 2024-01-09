@@ -142,26 +142,26 @@ ul li ul li a {display:block !important;}
 	font-size: 20px;
 }
 .sprite {
-	background: url('../images/Add a little bit of body text.png') no-repeat -251px -207px;
+	background: url(images/Add a little bit of body text.png) no-repeat -251px -207px;
 	width: 59px;
 	height: 58px;
 	float:right;
 	margin-left:20px;
 }
 .sprite:hover {
-	background: url('../images/Add a little bit of body text.png') no-repeat -251px -269px;
+	background: url(images/Add a little bit of body text.png) no-repeat -251px -269px;
 	width: 59px;
 	height: 59px;
 }
 .sprite2 {
-	background: url('../images/Add a little bit of body text.png') no-repeat -319px -207px;
+	background: url(images/Add a little bit of body text.png) no-repeat -319px -207px;
 	width: 58px;
 	height: 58px;
 	float:right;
 	margin-right:20px;
 }
 .sprite2:hover {
-	background: url('../images/Add a little bit of body text.png') no-repeat -319px -269px;
+	background: url(images/Add a little bit of body text.png) no-repeat -319px -269px;
 	width: 58px;
 	height: 59px;
 }
