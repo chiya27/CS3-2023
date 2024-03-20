@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title> Daguro Anagram Checker </title>
+	</head>
+	<body>
+		<h1> ANAGRAM CHECKER: ENTER TWO WORDS </h1>
+		<button onclick="anagram()">Start Anagram Checker</button>
+	<script>
+	
+	function anagram(){
+		var word1 = prompt("Enter first word: ");
+		var word2 = prompt("Enter second word: ");
+		var count = 0;
+		var tempWord2 = word2.split(''); 
+		
+		for(let i=0; i<word1.length; i++){
+				for(let j=0; j<tempWord2.length; j++){
+					if(word1.charAt(i)==tempWord2[j]){
+					tempWord2[j] = ' ';
+					count++;
+					}
+				}
+			}
+			
+		if(count==word2.length){
+			alert("The words "+ word1 + " and "+ word2 +" are anagrams");
+			}
+			
+			else{
+			alert("The words "+ word1 + " and "+ word2 +" are not anagrams");
+			}
+	}
+	
+</script>
+</body>
+</html>
