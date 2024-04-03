@@ -21,7 +21,7 @@
 	var n = parseInt(prompt("Enter a number within 2-10:"));
 	var m = parseInt(prompt("Enter the second number within 2-10:"));
 	}
-	while(n<2||n>10||m<2||m>10);
+	while(isNaN(n)||n<2||n>10||isNaN(m)||m<2||m>10);
 	
 	var table = "<table>";
 	for(var i=1; i<=n; i++){
