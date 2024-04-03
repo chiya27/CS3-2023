@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head> Multiplication Table </head>
+<style>
+	table {
+	border-collapse: collapse;
+	border: 2px solid black;
+	padding: 1px;
+	}
+	th, td{
+	text-align: center;
+	border: 2px solid black;
+	padding: 1px;
+	color: blue;
+	width: 20px;
+	}
+</style>
+<body>
+<script>
+	do{
+	var n = parseInt(prompt("Enter a number within 2-10:"));
+	var m = parseInt(prompt("Enter the second number within 2-10:"));
+	}
+	while(n<2||n>10||m<2||m>10);
+	
+	var table = "<table>";
+	for(var i=1; i<=n; i++){
+		table += "<tr>";
+		for(var j=1; j<=m; j++){
+			table += "<td>" + (i*j) + "</td>";
+			}
+			table += "</tr>";
+			}
+			table += "</table>";
+			document.write(table);
+			
+</script>
+</body>
+</html>
