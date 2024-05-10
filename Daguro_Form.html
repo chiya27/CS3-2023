@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title> Sign-Up Form </title>
+<style>
+	body {
+		background-image: url('bg.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		font-family: Arial, sans-serif;
+	}
+
+	.container {
+		margin-top: 20px;
+		padding: 30px;
+		padding-left:90px;
+		padding-right:90px;
+		background-color: rgba(255, 255, 255, 0.8);
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		position: absolute;
+		top: 47%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding-bottom: 10px; 
+		align-items: center;
+	}
+
+	legend{
+		text-align: center;
+	}
+
+	form {
+		margin-bottom: 15px;
+		display: flex;
+		align-items: center;
+	}
+
+	form input[type="text"],
+	form input[type="email"],
+	form input[type="radio"],
+	form input[type="password"],
+	form input[type="submit"], 
+	form input[type="reset"]{
+		padding: 10px;
+		margin: 5px;
+		font-size: 16px;
+		border-radius: 10px;
+		border: 1px solid #ccc;
+		box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+	}
+
+	form input[type="submit"]:hover{
+		 color: #4E5166; 
+		 }
+		 
+	form input[type="reset"]:hover{
+		 color: #4E5166; 
+		 }
+		 
+	.output {
+		background-color: #A9BDCD;
+		padding: 10px;
+		margin-top: 20px; 
+		color: #4E5166;
+		max-width: 240px;
+		overflow: auto;
+	}
+
+</style>
+</head>
+<body>
+	<div class="container">
+		<div id="form">
+		<form onsubmit="return output();" onreset="clearOutput()">
+			<fieldset>
+				<legend>Sign-up Form</legend>
+				<label for="name">Name:</label><br>
+				<input type="text" id="name" placeholder="Enter name" onblur="onBlur(this);" onfocus="onFocus(this);" required><br>
+
+				<label for="usnme">Preferred Username:</label><br>
+				<input type="text" id="usnme" placeholder="Enter username" onblur="onBlur(this);" onfocus="onFocus(this);" required><br>
+
+				<label for="gender"> <br> Gender: <br> </label>
+				<div id="gender">
+					<input type="radio" id="male" name="gender" value="Male">
+					<label for="male"> Male </label><br>
+					<input type="radio" id="female" name="gender" value="Female">
+					<label for="female"> Female </label><br>
+					<input type="radio" id="pntm" name="gender" value="Prefer not to mention">
+					<label for="pntm"> Prefer not to mention </label>
+				</div>
+
+				<label for="psw"> <br> Password:</label><br>
+				<input type="password" id="psw" placeholder="Enter password" onblur="onBlur(this);" onfocus="onFocus(this);" required><br>
+
+				<label for="eml">Email Address:</label><br>
+				<input type="email" id="eml" placeholder="Enter email address" onblur="onBlur(this);" onfocus="onFocus(this);" required><br>
+
+				<label for="adrs">Address:</label><br>
+				<input type="text" id="adrs" placeholder="Enter address" onblur="onBlur(this);" onfocus="onFocus(this);" required><br>
+
+				<label for="prgrph">User's Interest:</label><br>
+				<input type="text" id="prgrph" placeholder="Enter a short paragraph" onblur="onBlur(this);" onfocus="onFocus(this);" required><br>
+				
+				<input type="submit" value="Submit form">
+				<input type="reset" value="Reset">
+			</fieldset>
+	</div>
+    </form>
+    <div class="output">
+        <legend>Output:</legend>
+        <p id="output"></p>
+    </div>
+	</div>
+
+<script>
+	function output(){
+		var name = document.getElementById("name").value;
+		var username = document.getElementById("usnme").value;
+		var gender = "";
+		var password = document.getElementById("psw").value;
+		var emailadd = document.getElementById("eml").value;
+		var address = document.getElementById("adrs").value;
+		var userint = document.getElementById("prgrph").value;
+		
+		var maleRadio = document.getElementById("male");
+		var femaleRadio = document.getElementById("female");
+		var pntmRadio = document.getElementById("pntm");
+		
+		if (maleRadio.checked) {
+			gender = maleRadio.value;
+		} else if (femaleRadio.checked) {
+			gender = femaleRadio.value;
+		} else if (pntmRadio.checked) {
+			gender = pntmRadio.value;
+		}
+
+		document.getElementById("output").innerHTML = "Name: " + name + "<br>" + 
+													"Username: " + username + "<br>" + 
+													"Gender: " + gender + "<br>" + 
+													"Password: " + password + "<br>" + 
+													"Email Address: " + emailadd + "<br>" + 
+													"Address: " + address + "<br>" + 
+													"User's Interest: " + userint;
+		return false;
+	}
+
+	function onBlur(input) {
+		if (input.value === "") {
+			input.style.border = "2px solid red";
+		}
+	}
+
+	function onFocus(input) {
+		input.style.border = "2px solid green";
+	}
+
+	function clearOutput() {
+		document.getElementById("output").innerHTML = "";
+	}
+</script>
+</body>
+</html>
