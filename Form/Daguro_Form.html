@@ -144,12 +144,12 @@
 		}
 
 		document.getElementById("output").innerHTML = "Name: " + name + "<br>" + 
-													"Username: " + username + "<br>" + 
-													"Gender: " + gender + "<br>" + 
-													"Password: " + password + "<br>" + 
-													"Email Address: " + emailadd + "<br>" + 
-													"Address: " + address + "<br>" + 
-													"User's Interest: " + userint;
+							"Username: " + username + "<br>" + 
+							"Gender: " + gender + "<br>" + 
+						        "Password: " + password + "<br>" + 
+							"Email Address: " + emailadd + "<br>" + 
+							"Address: " + address + "<br>" + 
+							"User's Interest: " + userint;
 		return false;
 	}
 
@@ -164,8 +164,12 @@
 	}
 
 	function clearOutput() {
-		document.getElementById("output").innerHTML = "";
-	}
+    document.getElementById("output").innerHTML = "";
+    var inputs = document.getElementsByTagName("input");
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].style.border = "1px solid #ccc";
+    }
+}
 </script>
 </body>
 </html>
